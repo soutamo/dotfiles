@@ -70,8 +70,6 @@ alias	cat_null='cat > /dev/null'
 alias	SC='source ~soutamo/.bashrc'
 alias	Sync-GIT='OLD_DIR=$(pwd);FOO=~soutamo/GIT && for i in $(ls "${FOO}"); do echo "${FOO}/${i}" && cd "${FOO}/${i}" && git pull; done;cd "${OLD_DIR}";unset FOO;unset OLD_DIR'
 
-alias	OAuth_Amazon='oathtool --totp -d 6 -b OO36ST5HQ7R6ZGAZWUAOHRQAJB62HSUR2BRKZG3U2JJDXYXLNNBQ'
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
