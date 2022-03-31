@@ -1,0 +1,60 @@
+[user]
+	name = Ismo Soutamo
+    #email = Ismo.Soutamo@iki.fi
+	email = Ismo.Soutamo@Data-Findings.Com
+[core]
+	editor = vi
+
+[alias]
+	co = checkout
+	com = checkout master
+	cob = checkout -b
+	coo = !git fetch && git checkout
+	br = branch
+	brd = branch -d
+#	brD = branch -D
+	merged = branch --merged
+	dmerged = "git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+    gdm = diff master 
+	st = status
+	sts = status --short
+	aa = add -A .
+	cm = commit -m
+	aacm = !git add -A . && git commit -m
+	cp = cherry-pick
+	amend = commit --amend -m
+	dev = !git checkout dev && git pull origin dev
+	master = !git checkout master && git pull origin
+	po = push origin
+	pom = push origin master
+	poh = push origin HEAD
+    pu = pull
+    pv = pull -v
+    pvl = !git pull -v && echo "" && git log -1 HEAD
+    pvlp = !git pull -v && echo "" && git log -p -1 HEAD
+	plo = pull origin
+	plom = pull origin master
+	ploh = pull origin HEAD
+	unstage = reset --soft HEAD^
+	ls = log --pretty=format:"%h%d\\ %Creset%s\\ [%cn]" --decorate
+	ll = log --pretty=format:"%h%d\\ %Creset%s\\ [%cn]" --decorate --numstat
+	f = "!git ls-files | grep -i"
+	gr = grep -Ii
+    last = log -1 HEAD
+	update = pull -v
+    lal = !git config --global --list|egrep alias|cut -c 7-
+
+[credential]
+	helper = osxkeychain
+[merge]
+	tool = opendiff
+[pager]
+	config = less -eFRX
+
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+
+[pull]
+	rebase = false
